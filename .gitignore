@@ -1,0 +1,15 @@
+# Byte-compiled / cache files
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# SQLite database (not needed since Supabase is used)
+db.sqlite3
+
+# Environment variables (keep secrets safe)
+.env
+
+# VS Code settings
+.vscode/
