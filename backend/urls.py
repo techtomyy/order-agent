@@ -19,5 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('orders.urls')),  # 👈 add this
+    path('api/', include('orders.urls')),
+    path('api/twilio/', include('twilio_app.urls')), 
 ]
