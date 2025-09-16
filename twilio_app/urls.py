@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import twilio_voice
+from . import views
 
 urlpatterns = [
-    path('voice/', twilio_voice, name='twilio-voice'),
+    path("voice/", views.twilio_voice, name="twilio_voice"),
+    path("process_recording/", views.handle_recording, name="handle_recording"),
 ]
