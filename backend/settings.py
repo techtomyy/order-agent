@@ -8,6 +8,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Load environment variables from .env (must be in the same folder as manage.py)
 load_dotenv(BASE_DIR / ".env")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+WHATSAPP_TOKEN = os.getenv("WHATSAPP_TOKEN")
+WHATSAPP_PHONE_ID = os.getenv("WHATSAPP_PHONE_ID")
+VERIFY_TOKEN = os.getenv("VERIFY_TOKEN")
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-change-this-to-your-own-key'
@@ -31,6 +34,7 @@ INSTALLED_APPS = [
     'orders',
     'integrations',
     "corsheaders",
+    'whatsapp_app',
 ]
 
 MIDDLEWARE = [

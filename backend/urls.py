@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from integrations.views import whatsapp_webhook  # import the view directly
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('orders.urls')),
     path('api/twilio/', include('twilio_app.urls')),
-    path("webhook/", include("integrations.urls")),
+    path("webhook/whatsapp/", include("whatsapp_app.urls")),  
 ]
